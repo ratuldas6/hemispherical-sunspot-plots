@@ -2,20 +2,20 @@ import csv
 import matplotlib.pyplot as plt
 import numpy as np
 
-def divideRow(line):
+def divideRow(line): #extracts data from each cell in the .csv file
     linedata = line.split(';')
-    reqdata = [linedata[3],linedata[4],linedata[5],linedata[6]]
+    reqdata = [linedata[3],linedata[4]]
     return(reqdata)
 
-x=[]
-y=[]
+x=[] #for time
+y=[] #for sunspot numbers
 
-with open('SN_d_hem_V2.0.csv', newline='') as File:  
+with open('SN_d_hem_V2.0.csv', newline='') as File: 
     reader = csv.reader(File)
     for row in reader:
         row_data = divideRow(row[0])
-        x.append(row_data[0])
-        y.append(row_data[1])
+        x.append(row_data[0]) #adds time data to x
+        y.append(row_data[1]) #sunspot numbers data to y
 
 plt.plot(x,y, marker='o')
 
