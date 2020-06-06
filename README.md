@@ -1,2 +1,2 @@
 # hemispherical-sunspot-plots
-My attempt at plotting a sunspot number vs time graph for 1992 to 2020
+My attempt at plotting a sunspot number vs time graph for 1992 to 2020 (both daily and monthly), and only monthly for 1950 to 1994. The source of the data used is : http://www.sidc.be/silso/datafiles
